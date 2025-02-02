@@ -10,5 +10,5 @@ def home():
 
 # Ensure the app runs on the correct port
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 8080))  # Use Railway-assigned port or default to 8080
+    port = int(os.getenv("PORT", 8080))  # Get the port from Railway
     app.run(host="0.0.0.0", port=port)
