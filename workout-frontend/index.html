@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout & Nutrition Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <h1>Workout & Nutrition Planner</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#workouts">Workouts</a></li>
+            <li><a href="#nutrition">Nutrition</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Workout Section -->
+    <section id="workouts">
+        <h2>Select a Workout Category</h2>
+        <label for="category">Choose Workout Category:</label>
+        <select id="category">
+            <option value="10">Abs</option>
+            <option value="8">Legs</option>
+            <option value="11">Arms</option>
+            <option value="13">Chest</option>
+            <option value="12">Back</option>
+        </select>
+        <button onclick="fetchWorkouts()">Get Workouts</button>
+
+        <div id="loading" class="hidden">Loading workouts...</div>
+        <div id="workout-results"></div>
+    </section>
+
+    <!-- Nutrition Section -->
+    <section id="nutrition">
+        <h2>Nutrition Information</h2>
+        <button onclick="fetchNutrition()">Get Nutrition Data</button>
+        <div id="nutrition-results"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About This App</h2>
+        <p>This app helps you plan workouts and find nutrition information using AI and public fitness APIs.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
